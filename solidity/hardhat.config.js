@@ -8,6 +8,7 @@ require('dotenv').config();
 
 
 const mnemonic = process.env.MNEMONIC || 'test test test test test test test test test test test junk';
+const privateKey = process.env.PRIVATE_KEY;
 const scankey = process.env.ETHERSCAN_API_KEY || 'EtherScan API key';
 
 module.exports = {
@@ -66,8 +67,18 @@ module.exports = {
         goerli: {
             url: 'https://ethereum-goerli.publicnode.com',
             saveDeployments: true,
-            accounts: ['e0de26a54a917df9e8f1fa50436bb54085f76e55030e84745356a5857d59b993'],
+            accounts: {
+                mnemonic: mnemonic,
+            },
             chainId: 5,
+        },
+        sepolia: {
+            url: 'https://rpc.sepolia.org',
+            saveDeployments: true,
+            accounts: {
+                mnemonic: mnemonic,
+            },
+            chainId: 11155111,
         },
         polygon: {
             url: 'https://polygon.llamarpc.com',
