@@ -1,0 +1,16 @@
+{
+  "name": "safe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@safe-global/api-kit": "^2.2.0",
+    "@safe-global/protocol-kit": "^3.0.1",
+    "@safe-global/safe-core-sdk-types": "^4.0.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
