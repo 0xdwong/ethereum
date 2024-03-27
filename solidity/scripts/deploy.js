@@ -3,21 +3,22 @@ const { writeAddr } = require('./recoder.js');
 
 async function main() {
     let [owner] = await ethers.getSigners();
-    let contractName = 'Test';
-    const contract = await ethers.getContractFactory(contractName);
+    let contractName = '';
 
     // 部署合约
     let params = [];
-    const instance = await contract.deploy(...params);
-    await instance.deployed();
+    instance = await ethers.deployContract(contractName, params);
+    await instance.waitForDeployment();
+
+    const instanceAddr = await instance.getAddress();
 
     console.log(`\ndeployer:`, owner.address);
-    console.log(`\ncontract[${contractName}] deployed to:`, instance.address);
+    console.log(`\ncontract[${contractName}] deployed to:`, instanceAddr);
 
-    await writeAddr(instance.address, contractName, network.name);
+    await writeAddr(instanceAddr, contractName, network.name);
 
     if (!['hardhat', 'local'].includes(network.name)) {
-        console.log('\nPlease verify contract:\n', `npx hardhat verify ${instance.address} --network ${network.name} ${params.join(' ')}`);
+        console.log('\nPlease verify contract:\n', `npx hardhat verify ${instanceAddr} --network ${network.name} ${params.join(' ')}`);
     }
 }
 
