@@ -1,0 +1,8 @@
+# 多签钱包地址
+MULTISIG_ADDR = ""
+
+# 多签钱包owner之一的私钥
+PRIVATE_KEY = "" 
+
+# RPC 节点
+PROVIDER_URL = ""
