@@ -34,14 +34,14 @@ export async function createTxs(transactions: MetaTransactionData[], proposeTx: 
       chainId: (await provider.getNetwork()).chainId
     })
 
-    // await apiKit.proposeTransaction({
-    //   safeAddress,
-    //   safeTransactionData: safeTransaction.data,
-    //   safeTxHash,
-    //   senderAddress: await safeOwner1.getAddress(),
-    //   senderSignature: senderSignature.data,
-    // })
-    console.log('propose transaction to safe wallet', (await provider.getNetwork()).chainId);
+    await apiKit.proposeTransaction({
+      safeAddress,
+      safeTransactionData: safeTransaction.data,
+      safeTxHash,
+      senderAddress: await safeOwner1.getAddress(),
+      senderSignature: senderSignature.data,
+    })
+    console.log('propose transaction to safe wallet');
   }
 
   console.log('==create txs succeed==');
