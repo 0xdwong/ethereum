@@ -41,9 +41,9 @@ const erc20Iface = new Interface(erc20ABI);
 const erc721Iface = new Interface(erc721ABI);
 const erc1155Iface = new Interface(erc1155ABI);
 
-export function encodeErc20Transfer(receiver: string, amount: number, decimal: number = 18) {
+export function encodeErc20Transfer(receiver: string, amount: number | string, decimal: number = 18) {
     const amountToSend = ethers.parseUnits(String(amount), decimal);
-    const encodedData = erc20Iface.encodeFunctionData("safeTransferFrom", [receiver, amountToSend]);
+    const encodedData = erc20Iface.encodeFunctionData("transfer", [receiver, amountToSend]);
     return encodedData;
 }
 
@@ -52,7 +52,35 @@ export function encodeErc721SafeTransferFrom(owner: string, receiver: string, to
     return encodedData;
 }
 
-export function encodeErc1155SafeTransferFrom(owner: string, receiver: string, tokenId: number | string, amount: number, data = '0x') {
+export function encodeErc1155SafeTransferFrom(owner: string, receiver: string, tokenId: number | string, amount: number | string, data = '0x') {
     const encodedData = erc1155Iface.encodeFunctionData("safeTransferFrom", [owner, receiver, tokenId, amount, data]);
     return encodedData;
+}
+
+export function buildNativeTransfer(receiver: string, amount: number | string) {
+    return {
+        'to': receiver,
+        'data': '0x',
+        'value': ethers.parseUnits(String(amount), 'ether').toString()
+    }
+}
+
+export function buildERC20Transfer(contract: string, receiver: string, amount: number | string, decimal: number = 18) {
+    const callData = encodeErc20Transfer(receiver, amount, decimal);
+
+    return {
+        'to': contract,
+        'data': callData,
+        'value': '0',
+    }
+}
+
+export function buildERC1155Transfer(contract: string, owner: string, receiver: string, tokenId: number | string, amount: number, data = '0x') {
+    const callData = encodeErc1155SafeTransferFrom(owner, receiver, tokenId, amount, data);
+
+    return {
+        'to': contract,
+        'data': callData,
+        'value': '0',
+    }
 }
