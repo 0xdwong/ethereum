@@ -1,2 +1,4 @@
 node_modules/
 .env
+
+translation/eips/*en.md
