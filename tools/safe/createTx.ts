@@ -29,8 +29,6 @@ async function main() {
 
   const proposeTx = true; //是否同步到 safe 服务器
   await createTxs(transactions, proposeTx);
-
-  console.log('==batch== end');
 }
 
 main()
