@@ -6,6 +6,7 @@
 
 ## 基础
 - 修饰器
+- 销毁合约
 
 ## 常用合约
 - [ERC20](./contracts/ERC20/BaseERC20.sol)
