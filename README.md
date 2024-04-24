@@ -7,6 +7,7 @@
 
 
 ## Solidity
+- [Solidity 语言](./solidity/README.md)
 - [常见合约漏洞](./solidity/README.md#常见漏洞)
 - [solcjs](./tools/solcjs/README.md)
 - [solc](./tools/solc/README.md)

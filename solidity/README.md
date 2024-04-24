@@ -1,12 +1,8 @@
 # Solidity
 
-## 公告
-- [2023-11-08 Solidity 0.8.23 发布公告](../translation/2023-11-08-solidity-0.8.23-release-announcement.md)
-    - 修复无效的 `verbatim` 重复 bug
-
 ## 基础
 - 修饰器
-- [销毁合约](./tutorials/销毁合约.md)
+- [销毁合约](./tutorials/selfdestruct.md)
 
 ## 常用合约
 - [ERC20](./contracts/ERC20/BaseERC20.sol)
