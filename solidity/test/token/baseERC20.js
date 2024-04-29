@@ -8,7 +8,8 @@ describe("BaseERC20", async () => {
     const name = 'BaseERC20';
     const symbol = 'BERC20';
     const decimals = 18;
-    const totalSupply = ethers.parseUnits('1.0', decimals).mul(100000000); // 100 million
+    const totalSupply = ethers.parseUnits('1.0', decimals) * 100000000n; // 100 million
+
     const randomAccount = ethers.Wallet.createRandom();
     const randomAddr = randomAccount.address;
 
@@ -17,10 +18,7 @@ describe("BaseERC20", async () => {
         // 部署 BaseERC20
         accounts = await ethers.getSigners();
         owner = accounts[0];
-
-        const factory = await ethers.getContractFactory('BaseERC20');
-        contract = await factory.deploy();
-        await contract.deployed();
+        contract = await ethers.deployContract("BaseERC20");
     }
 
     beforeEach(async () => {
@@ -58,7 +56,7 @@ describe("BaseERC20", async () => {
     describe("transfer", function () {
         it("Should fail if sender doesn’t have enough balance", async function () {
             const curBalance = await contract.balanceOf(owner.address);
-            const transAmount = curBalance.add(1);
+            const transAmount = curBalance + 1n;
 
             await expect(
                 contract.connect(owner).transfer(randomAddr, transAmount)
@@ -88,7 +86,7 @@ describe("BaseERC20", async () => {
             let sender = accounts[1];
             let recipient = randomAddr;
             let approveAmount = 100;
-            let usedAmout = approveAmount/2;
+            let usedAmout = approveAmount / 2;
             let leftAmount = approveAmount - usedAmout;
 
             await contract.connect(owner).approve(sender.address, approveAmount);
@@ -118,7 +116,7 @@ describe("BaseERC20", async () => {
         it('Should fail if sender doesn’t have enough tokens', async function () {
             let sender = accounts[1];
             let recipient = randomAddr;
-            let allowanceAmount = totalSupply.add(1);
+            let allowanceAmount = totalSupply + 1n;
 
             await contract.connect(owner).approve(sender.address, allowanceAmount);
             await expect(contract.connect(sender).transferFrom(owner.address, recipient, allowanceAmount)).to.be.revertedWith('ERC20: transfer amount exceeds balance');
