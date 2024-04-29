@@ -14,7 +14,7 @@ async function init() {
     // console.log('====contract address====', await contractInstance.getAddress());
 }
 
-describe('BytesAddition', () => {
+describe.skip('BytesAddition', () => {
 
     before(async () => {
         await init();

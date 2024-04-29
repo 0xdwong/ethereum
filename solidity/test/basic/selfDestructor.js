@@ -13,7 +13,7 @@ async function init() {
     instanceAddr = await instance.getAddress();
 }
 
-describe.only('SelfDestructor', () => {
+describe('SelfDestructor', () => {
 
     before(async () => {
         await init();

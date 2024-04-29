@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
 
-let contrac;
+let contract;
 let accounts = [];
 let owner, account1;
 
@@ -10,9 +10,7 @@ async function init() {
     owner = accounts[0];
     account1 = accounts[1];
 
-    const factory = await ethers.getContractFactory('AccessControl');
-    contrac = await factory.deploy();
-    await contrac.deployed();
+    contract = await ethers.deployContract("AccessControl");
 }
 
 describe('AccessControl', () => {
@@ -25,7 +23,7 @@ describe('AccessControl', () => {
         it('setOwner should be private', async () => {
             let errMsg = '';
             try{
-                await contrac.connect(account1).setOwner(account1.address);
+                await contract.connect(account1).setOwner(account1.address);
             }catch(err){
                 errMsg = err.message;
             }
