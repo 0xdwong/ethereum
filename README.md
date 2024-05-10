@@ -1,10 +1,7 @@
 # Share something about Ethereum 
 
 ## EIPS
-- [ERC-55（地址校验）](./eips/erc55/README.md)
-- [ERC-6551（非同质化代币绑定账户提案）](./eips/erc6551/README.md)
-- [ERC-1167](./eips/erc1167/README.md)
-
+见另一个仓库：[https://github.com/0xdwong/eips](https://github.com/0xdwong/eips)
 
 ## Solidity
 - [Solidity 语言](./solidity/README.md)
