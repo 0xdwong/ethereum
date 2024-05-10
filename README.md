@@ -4,10 +4,7 @@
 见另一个仓库：[https://github.com/0xdwong/eips](https://github.com/0xdwong/eips)
 
 ## Solidity
-- [Solidity 语言](./solidity/README.md)
-- [常见合约漏洞](./solidity/README.md#常见漏洞)
-- [solcjs](./tools/solcjs/README.md)
-- [solc](./tools/solc/README.md)
+见另一个仓库：[https://github.com/0xdwong/solidity](https://github.com/0xdwong/solidity)
 
 ## 工具
 - [whatsabi](./tools/whatsabi/README.md)
