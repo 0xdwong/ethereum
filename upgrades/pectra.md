@@ -17,22 +17,8 @@ Pectra 升级并没有一个主要目标，而像几个 EIP 的修修补补。�
 - [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002): 可触发的执行层退出
 - [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251): 增加最大有效余额
 - [EIP-7549](https://eips.ethereum.org/EIPS/eip-7549): 将委员会索引移出证明
-- [EIP-7594](https://eips.ethereum.org/EIPS/eip-7594): PeerDAS - 对等数据可用性采样
 - [EIP-7685](https://eips.ethereum.org/EIPS/eip-7685): 通用执行层请求
 - [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702): 为一个交易设置 EOA 账户代码
-
-EOF EIP 列在 [EIP-7692](https://eips.ethereum.org/EIPS/eip-7692) 中，包括: 
-- [EIP-663](https://eips.ethereum.org/EIPS/eip-663): SWAPN, DUPN 和 EXCHANGE 指令
-- [EIP-3540](https://eips.ethereum.org/EIPS/eip-3540): EOF - EVM 对象格式 v1
-- [EIP-3670](https://eips.ethereum.org/EIPS/eip-3670): EOF - 代码验证
-- [EIP-4200](https://eips.ethereum.org/EIPS/eip-4200): EOF - 静态相对跳转
-- [EIP-4750](https://eips.ethereum.org/EIPS/eip-4750): EOF - 函数
-- [EIP-5450](https://eips.ethereum.org/EIPS/eip-5450): EOF - 栈验证
-- [EIP-6206](https://eips.ethereum.org/EIPS/eip-6206): EOF - JUMPF 和不返回的函数
-- [EIP-7069](https://eips.ethereum.org/EIPS/eip-7069): 改进的 CALL 指令
-- [EIP-7480](https://eips.ethereum.org/EIPS/eip-7480): EOF - 数据段访问指令
-- [EIP-7620](https://eips.ethereum.org/EIPS/eip-7620): EOF 合约创建
-- [EIP-7698](https://eips.ethereum.org/EIPS/eip-7698): EOF - 创建交易
 
 
 
@@ -40,6 +26,7 @@ EOF EIP 列在 [EIP-7692](https://eips.ethereum.org/EIPS/eip-7692) 中，包括:
 - RIP-7212: 支持 secp256r1 曲线的预编译
 - [EIP-7547](https://eips.ethereum.org/EIPS/eip-7547): 包含列表
 - [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623): 增加 calldata 成本
+- [EIP-7742](./eip-7742.md): Uncouple blob count between CL and EL 
 
 
 共识层：EIP-6110, EIP-7002 EIP-7251, EIP-7549 和 EIP-7594
