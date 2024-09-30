@@ -18,21 +18,20 @@ Pectra 升级是以太坊网络的下一个重要里程碑，预计将于 2025 �
 
 ### 已确定包含的 EIPs
 
-1. [EIP-2537](https://eips.ethereum.org/EIPS/eip-2537)：BLS12-381 曲线操作的预编译
-2. [EIP-2935](https://eips.ethereum.org/EIPS/eip-2935)：在状态中保存历史区块哈希
-3. [EIP-6110](https://eips.ethereum.org/EIPS/eip-6110)：在链上提供验证者存款
-4. [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002)：可触发的执行层退出
-5. [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251)：增加最大有效余额
-6. [EIP-7549](https://eips.ethereum.org/EIPS/eip-7549)：将委员会索引移出证明
-7. [EIP-7685](https://eips.ethereum.org/EIPS/eip-7685)：通用执行层请求
-8. [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702)：为一个交易设置 EOA 账户代码
+- [EIP-2537](https://eips.ethereum.org/EIPS/eip-2537)：BLS12-381 曲线操作的预编译
+- [EIP-2935](https://eips.ethereum.org/EIPS/eip-2935)：在状态中保存历史区块哈希
+- [EIP-6110](https://eips.ethereum.org/EIPS/eip-6110)：在链上提供验证者存款
+- [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002)：可触发的执行层退出
+- [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251)：增加最大有效余额
+- [EIP-7549](https://eips.ethereum.org/EIPS/eip-7549)：将委员会索引移出证明
+- [EIP-7685](https://eips.ethereum.org/EIPS/eip-7685)：通用执行层请求
+- [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702)：为一个交易设置 EOA 账户代码
 
 ### 考虑中的 EIPs
 
-- EIP-7212: 支持 secp256r1 曲线的预编译
-- [EIP-7547](https://eips.ethereum.org/EIPS/eip-7547)：包含列表
 - [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623)：增加 calldata 成本
 - [EIP-7742](https://eips.ethereum.org/EIPS/eip-7742)：解除共识层和执行层之间的blob计数关系
+- [EIP-7762](https://eips.ethereum.org/EIPS/eip-7762.md): 增加 MIN_BASE_FEE_PER_BLOB_GAS 
 
 ## 关键 EIP 简介
 
